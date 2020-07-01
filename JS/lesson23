@@ -1,0 +1,17 @@
+"use strict";
+//===============__proto__ устаревшое наследование=================
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function () {
+        console.log('Hello')
+    }
+};
+const john = Object.create(soldier); //Создание с наследованием
+// const john = {
+//     health: 100
+// };
+//john.__proto__ = soldier; //Наследуем armor от soldier (__proto__  уже не используется)
+//Object.setPrototypeOf(john, soldier); -наследование от уже существующего обьекта
+john.sayHello();
+//===============================================================
