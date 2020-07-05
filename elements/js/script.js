@@ -6,20 +6,15 @@ const circles = document.getElementsByClassName('circle');
 const hearts = document.querySelectorAll('.heart');
 const oneHeart = document.querySelector('.heart');
 
+//Изменение CSS стилей через обращение к элементу с id = box
 // box.style.backgroundColor = 'blue';
 // box.style.width = '500px';
-box.style.cssText = `background-color: blue; width: 500px;`;
 
+//Изменение css стилей через cssText
+box.style.cssText = 'background-color: blue; width: 500px';
+//Изменение элемента btns[1] с помощью css стилей
 btns[1].style.borderRadius = '100%';
-circles[0].style.backgroundColor = 'red';
 
-hearts.forEach(item => {
-    item.style.backgroundColor = 'blue';
-});
-
-const div = document.createElement('div');
-// const text = document.createTextNode('Hello');
-
-div.classList.add('black');
-
-document.body.append(div);
+//При обращении к псевдомассиву а не к элементу будет получена ошибка
+//circles.style.backgroundColor = 'red'; - Не правельное обращение
+circles[0].style.backgroundColor = 'red'; // Правельное обращение к эелементу
