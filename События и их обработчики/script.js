@@ -13,15 +13,18 @@ const overlay = document.querySelector('overlay')
 // });
 
 //Функция удаляющая элемент со страницы
-// let i = 0
+const deleteElementSec = (e) => {
+    e.target.remove();
+}
+ let i = 0
 const deleteElement = (e) => {
     console.log(e.target);
-    console.log(e.type);
-    // i++;
-    // if (i === 0){
-    //     //Удаление обработчика событий после клика
-    //     btn.removeEventListener('click', deleteElement);
-    // }
+    //console.log(e.type);
+     i++;
+    if (i === 0){
+        //Удаление обработчика событий после клика
+        btn.removeEventListener('click', deleteElement);
+    }
 }
 //Создаем событие при клике вызываем функцию и она удаляет элемент
 // btn.addEventListener('click', deleteElement);
